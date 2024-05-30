@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/5f3d838d-8ea1-4995-8d76-b97bdd32a6e4/resourceGroups/projetointegradoPUC24/providers/Microsoft.Web/sites/projetointegradoPUC24",
+    "appService.deploySubpath": "."
+}

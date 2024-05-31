@@ -4,7 +4,7 @@ const router = express.Router();
 
 const CLIENT_ID = '180608388022-s3eo68kb4tt948ferf5ji17g178frm4t.apps.googleusercontent.com';
 const CLIENT_SECRET = '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';
-const REDIRECT_URI = '<http://localhost:3000/api/auth/google/callback>';
+const REDIRECT_URI = '<http://localhost:8080/api/auth/google/callback>';
 
 // Initiates the Google Login flow
 router.get('/auth/google', (req, res) => {

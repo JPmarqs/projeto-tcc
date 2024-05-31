@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 app.use('/api', itemRoutes); // Use '/api' como prefixo para todas as rotas da API
 
 app.get('/', (req, res) => {
-    res.send('Bem vindo! api')
+    res.send(`Bem vindo! api ${port}`)
 });
 
 app.listen(port, () => {

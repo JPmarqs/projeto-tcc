@@ -35,8 +35,7 @@ jobs:
           path: release.zip
 
       - name: npm start
-              run: |
-                npm start
+          run: npm start
 
   deploy:
     runs-on: ubuntu-latest

@@ -23,7 +23,7 @@ jobs:
 
       - name: npm install
         run: |
-          npm install; npm start
+          npm install
 
       - name: Zip artifact for deployment
         run: zip release.zip ./* -r
@@ -66,4 +66,8 @@ jobs:
           app-name: 'projetofinal1'
           slot-name: 'Production'
           package: .
+
+        - name: npm start
+        run: |
+          npm start
           

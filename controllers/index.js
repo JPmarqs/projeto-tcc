@@ -94,6 +94,27 @@ router.get(
   }
 );
 
+router.get("/consultas/verificamedico/:id", async (req, res) => {
+  const consultas = await dbConsultas.selectVerificaSeMedicoTemConsulta(
+    req.params.id
+  );
+  res.json(consultas);
+});
+
+router.get("/consultas/verificamedico/:id", async (req, res) => {
+  const consultas = await dbConsultas.selectVerificaSeMedicoTemConsulta(
+    req.params.id
+  );
+  res.json(consultas);
+});
+
+router.get("/consultas/verificapaciente/:id", async (req, res) => {
+  const consultas = await dbConsultas.selectVerificaSePacienteTemConsulta(
+    req.params.id
+  );
+  res.json(consultas);
+});
+
 router.post("/consultas", async (req, res) => {
   await dbConsultas.insertConsultas(req.body);
   res.sendStatus(201);

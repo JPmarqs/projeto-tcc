@@ -43,14 +43,14 @@ async function updatePacientes(id, paciente) {
         ' WHERE "IDPACIENTE" = $9';
 
     const values = [
-        paciente[0].NOMEPACI,
-        paciente[0].DATANASPACI,
-        paciente[0].GENPACI,
-        paciente[0].ENDERPACI,
-        paciente[0].CIDADEPACI,
-        paciente[0].UFPACI,
-        paciente[0].TELPACI,
-        paciente[0].EMAILPACI,
+        paciente.NOMEPACI,
+        paciente.DATANASPACI,
+        paciente.GENPACI,
+        paciente.ENDERPACI,
+        paciente.CIDADEPACI,
+        paciente.UFPACI,
+        paciente.TELPACI,
+        paciente.EMAILPACI,
         id,
     ]
 
@@ -62,7 +62,7 @@ async function updatePacientes(id, paciente) {
 async function deletePacientes(id) {
 
     const sql = 'DELETE FROM "PACIENTES" ' +
-        '"IDPACIENTE" = $1 ';
+        'WHERE "IDPACIENTE" = $1 ';
 
     const values = [
         id,

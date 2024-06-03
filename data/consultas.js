@@ -34,6 +34,22 @@ async function selectConsultasPorMedico(id) {
     return res.rows;
 }
 
+async function selectVerificaSeMedicoTemConsulta(idMedico) {
+    const client = await db.connect();
+    const res = await client.query(
+        'SELECT * FROM "CONSULTAS" WHERE "IDMEDICOCON" = $1', [idMedico]
+    );
+    return res.rows;
+}
+
+async function selectVerificaSePacienteTemConsulta(idPaciente) {
+    const client = await db.connect();
+    const res = await client.query(
+        'SELECT "IDCONSULTA" FROM "CONSULTAS" WHERE "IDPACIENTECON" = $1', [idPaciente]
+    );
+    return res.rows;
+}
+
 async function selectConsultasPorPaciente(id) {
     const client = await db.connect();
     const res = await client.query(
@@ -120,6 +136,8 @@ module.exports = {
     selectConsultasPorMedico,
     selectConsultasPorPaciente,
     selectConsultasPorPacienteEMedico,
+    selectVerificaSeMedicoTemConsulta,
+    selectVerificaSePacienteTemConsulta,
     selectByIdConsultas,
     insertConsultas,
     updateConsultas,

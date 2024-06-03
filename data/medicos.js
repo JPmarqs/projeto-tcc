@@ -39,15 +39,15 @@ async function updateMedicos(id, medico) {
 
     const sql = 'UPDATE "MEDICOS" SET ' +
         '"NOMEMED"=$1, "ESPECIMED"=$2, "TELMED"=$3, "EMAILMED"=$4, "HRINICIOMED"=$5, "HRFIMMED"=$6 '+
-        'WHERE IDMEDICO=$7';
+        'WHERE "IDMEDICO"=$7';
 
     const values = [
-        medico[0].NOMEMED,
-        medico[0].ESPECIMED,
-        medico[0].TELMED,
-        medico[0].EMAILMED,
-        medico[0].HRINICIOMED,
-        medico[0].HRFIMMED,
+        medico.NOMEMED,
+        medico.ESPECIMED,
+        medico.TELMED,
+        medico.EMAILMED,
+        medico.HRINICIOMED,
+        medico.HRFIMMED,
         id,
     ]
 
